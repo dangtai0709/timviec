@@ -1,0 +1,60 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- Generator: Adobe Illustrator 21.0.2, SVG Export Plug-In . SVG Version: 6.00 Build 0)  -->
+<svg version="1.1" id="Layer_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
+	 viewBox="0 0 43 43" style="enable-background:new 0 0 43 43;" xml:space="preserve">
+<style type="text/css">
+	.st0{filter:url(#filter-1);}
+	.st1{fill:none;stroke:#FFFFFF;stroke-width:2;}
+	.st2{filter:url(#Adobe_OpacityMaskFilter);}
+	.st3{fill:#FFFFFF;}
+	.st4{mask:url(#mask-3_1_);fill:#FFFFFF;}
+</style>
+<filter  filterUnits="objectBoundingBox" height="110.8%" id="filter-1" width="105.2%" x="-2.6%" y="-3.9%">
+	<feOffset  dx="0" dy="7" in="SourceAlpha" result="shadowOffsetOuter1"></feOffset>
+	<feGaussianBlur  in="shadowOffsetOuter1" result="shadowBlurOuter1" stdDeviation="7"></feGaussianBlur>
+	
+		<feColorMatrix  in="shadowBlurOuter1" result="shadowMatrixOuter1" type="matrix" values="0 0 0 0 0   0 0 0 0 0   0 0 0 0 0  0 0 0 0.167685688 0">
+		</feColorMatrix>
+	<feMerge>
+		<feMergeNode  in="shadowMatrixOuter1"></feMergeNode>
+		<feMergeNode  in="SourceGraphic"></feMergeNode>
+	</feMerge>
+</filter>
+<title>Group 42</title>
+<desc>Created with Sketch.</desc>
+<g id="Page-1">
+	<g id="bTaskee_Homepage" transform="translate(-968.000000, -6092.000000)">
+		<g id="Group-7-Copy" transform="translate(251.000000, 5944.000000)" class="st0">
+			<g id="Group-42_1_" transform="translate(732.000000, 156.000000)">
+				<g id="Group-9_1_">
+					<g id="Group-4-Copy_1_">
+						<circle id="Oval_1_" class="st1" cx="6.5" cy="13.5" r="20.5"/>
+					</g>
+				</g>
+				<g id="envelope-of-white-paper_1_" transform="translate(6.000000, 5.000000)">
+					<defs>
+						<filter id="Adobe_OpacityMaskFilter" filterUnits="userSpaceOnUse" x="-11.2" y="-1.8" width="22.8" height="19">
+							<feColorMatrix  type="matrix" values="1 0 0 0 0  0 1 0 0 0  0 0 1 0 0  0 0 0 1 0"/>
+						</filter>
+					</defs>
+					<mask maskUnits="userSpaceOnUse" x="-11.2" y="-1.8" width="22.8" height="19" id="mask-3_1_">
+						<g class="st2">
+							<polygon id="path-2_1_" class="st3" points="1.5,-6.3 -13.8,-6.3 -13.8,19.2 16.8,19.2 16.8,-6.3 							"/>
+						</g>
+					</mask>
+					<path id="Fill-1_1_" class="st4" d="M11-1.2c-0.4-0.4-0.9-0.6-1.4-0.6H-9.2c-0.6,0-1,0.2-1.4,0.6c-0.4,0.4-0.6,0.9-0.6,1.5
+						v14.7c0,0.6,0.2,1.1,0.6,1.5c0.4,0.4,0.9,0.6,1.4,0.6H9.6c0.6,0,1-0.2,1.4-0.6c0.4-0.4,0.6-0.9,0.6-1.5V0.4
+						C11.6-0.2,11.4-0.8,11-1.2z M10,15.1c0,0.1,0,0.2-0.1,0.3c-0.1,0.1-0.2,0.1-0.3,0.1H-9.2c-0.1,0-0.2,0-0.3-0.1
+						c-0.1-0.1-0.1-0.2-0.1-0.3V4.7C-9.3,5-9,5.3-8.7,5.6c2.3,1.9,4.1,3.4,5.4,4.6c0.4,0.4,0.8,0.7,1.1,0.9c0.3,0.2,0.6,0.4,1.1,0.7
+						c0.5,0.2,0.9,0.3,1.3,0.3h0c0.4,0,0.8-0.1,1.3-0.3C2,11.5,2.4,11.3,2.6,11c0.3-0.2,0.6-0.5,1.1-0.9C5,8.9,6.8,7.4,9.1,5.6
+						C9.4,5.3,9.7,5,10,4.7V15.1z M10,0.7v0.1C10,1.4,9.8,2,9.4,2.6C9,3.3,8.6,3.8,8.1,4.2C6.5,5.6,4.8,7,3,8.5
+						C3,8.5,2.8,8.7,2.6,8.9C2.3,9.1,2.1,9.3,2,9.4C1.8,9.5,1.6,9.6,1.4,9.8C1.2,10,1,10.1,0.8,10.2c-0.2,0.1-0.4,0.1-0.5,0.1h0
+						c-0.2,0-0.4,0-0.5-0.1C-0.5,10.1-0.8,10-1,9.8c-0.2-0.2-0.4-0.3-0.6-0.4c-0.1-0.1-0.3-0.3-0.6-0.5c-0.2-0.2-0.4-0.4-0.4-0.4
+						C-4.4,7-6.1,5.6-7.7,4.2c-1.2-1-1.9-2.3-1.9-3.8c0-0.1,0-0.2,0.1-0.3C-9.4,0-9.3-0.1-9.2-0.1H9.6C9.6,0,9.7,0,9.8,0
+						c0.1,0,0.1,0,0.1,0.1c0,0.1,0,0.1,0.1,0.1c0,0,0,0.1,0,0.2c0,0.1,0,0.2,0,0.2V0.7z"/>
+				</g>
+			</g>
+		</g>
+	</g>
+</g>
+</svg>

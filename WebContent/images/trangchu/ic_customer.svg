@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="68px" height="68px" viewBox="0 0 68 68" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <!-- Generator: Sketch 46 (44423) - http://www.bohemiancoding.com/sketch -->
+    <title>Group 41</title>
+    <desc>Created with Sketch.</desc>
+    <defs>
+        <circle id="path-1" cx="34" cy="34" r="34"></circle>
+    </defs>
+    <g id="Page-1" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+        <g id="bTaskee_Homepage" transform="translate(-744.000000, -2610.000000)">
+            <g id="Group-22" transform="translate(0.000000, 2530.000000)">
+                <g id="Group-33" transform="translate(149.000000, 80.000000)">
+                    <g id="Group-41" transform="translate(595.000000, 0.000000)">
+                        <g id="Path-9-Copy-5">
+                            <mask id="mask-2" fill="white">
+                                <use xlink:href="#path-1"></use>
+                            </mask>
+                            <use id="Mask" fill="#F7F7F7" xlink:href="#path-1"></use>
+                        </g>
+                        <g id="Account" transform="translate(20.000000, 20.000000)" stroke="#FF7F53" stroke-width="2" stroke-linecap="round">
+                            <path d="M14.0018223,15.1964833 C18.2023482,15.1964833 21.6077129,11.7958881 21.6077129,7.60124524 C21.6077129,3.40660238 18.2023482,0.00600714286 14.0018223,0.00600714286 C9.80129635,0.00600714286 6.3959317,3.40660238 6.3959317,7.60124524 C6.3959317,11.7958881 9.80129635,15.1964833 14.0018223,15.1964833 L14.0018223,15.1964833 Z" id="Stroke-15"></path>
+                            <path d="M27.8307143,23.4761905 C27.8307143,18.9004048 21.6395194,15.1904762 14.0018223,15.1904762 C6.36412525,15.1904762 0.172930295,18.9004048 0.172930295,23.4761905" id="Stroke-13"></path>
+                            <path d="M27.657784,23.4761905 L27.657784,28.0091667 C27.657784,28.4137857 27.5201865,29 27.1191487,29 L0.884357644,29 C0.491617111,29 0,28.4089524 0,28.0091667 L0,23.4761905" id="Stroke-17"></path>
+                        </g>
+                    </g>
+                </g>
+            </g>
+        </g>
+    </g>
+</svg>

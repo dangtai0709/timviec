@@ -1,0 +1,7 @@
+eclipse.preferences.version=1
+encoding//src/controller/LoginServlet.java=UTF-8
+encoding//src/controller/NhanViecServlet.java=UTF-8
+encoding//src/controller/ThemDangKyDichVuServlet.java=UTF-8
+encoding//src/controller/ThemMoiNguoiDungServlet.java=UTF-8
+encoding//src/controller/XacNhanHoanThanhCVServlet.java=UTF-8
+encoding//src/model/dao/TaikhoanDAO.java=UTF-8
