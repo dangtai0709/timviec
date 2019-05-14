@@ -20,9 +20,8 @@ public class DangkydichvuBO {
 	 return	dv.themdangkydichvu(req);
 	}
 
-	public void suadangkydichvuTheoSoDienThoai(String hoTen, String soDienThoai, int namSinh, String diaChi,
-			String madangkydichvu) {
-		dv.suadangkydichvuTheoSoDienThoai(hoTen, soDienThoai, namSinh, diaChi, madangkydichvu);
+	public void suadangkydichvuTheoSoDienThoai(int macongviec, int maungvien) {
+		dv.suadangkydichvuTheoSoDienThoai(macongviec, maungvien);
 	}
 
 	public void xoadangkydichvuTheoSoDienThoai(int soDienThoai,int maungvien) {

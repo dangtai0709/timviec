@@ -41,7 +41,8 @@
 					type="hidden" name="maCTV" id="maCTV">
 				<button type="button" value="submit" name="submit"
 					onclick="danhGiaCTV();" class="btn btn-success hide1"
-					 style="margin-top: 10px" data-popup-close="rating-modal">Xác nhận</button>
+					style="margin-top: 10px" data-popup-close="rating-modal">Xác
+					nhận</button>
 			</div>
 			<div class="modal-footer"></div>
 			<!-- </form> -->
@@ -50,7 +51,8 @@
 </div>
 <div class="table-service-price section-space">
 	<div class="container">
-		<h2 class="heading2 text-center white-text">Danh sách hồ sơ đã nhận</h2>
+		<h2 class="heading2 text-center white-text">Danh sách hồ sơ đã
+			nhận</h2>
 		<div class="">
 			<%
 				ArrayList<dangkydichvu> listdangkydichvu = (ArrayList<dangkydichvu>) request.getAttribute("listCongViec");
@@ -69,11 +71,11 @@
 				style="font-size: 16px;">
 				<thead>
 					<tr>
-							<th>#</th>
-						<th>Mã dịch vụ </th>
+						<th>#</th>
+						<th>Mã dịch vụ</th>
 						<th>Số điện thoại</th>
 						<th>Tên người đăng ký</th>
-						
+						<th>Trạng thái</th>
 						<th>Thao tác</th>
 					</tr>
 				</thead>
@@ -86,9 +88,21 @@
 						<td><%=StringProcess.tendichvu(dkdv.getMadichvu())%></td>
 						<td><%=dkdv.getSodienthoai()%></td>
 						<td><%=dkdv.getTencongty()%></td>
-						
-						<td><a href="" title="Hủy ĐK"
-							onclick="layDL('<%=dkdv.getMacongviec() %>','<%=dkdv.getMaungvien() %>');">
+						<td>
+							<%
+								if (dkdv.getTrangthai() == 0) {
+							%> Chưa xác thực <%
+								} else {
+							%> Hồ sơ đã được nhận <%
+								}
+							%>
+						</td>
+						<td>
+						<a href="" title="Nhận hồ sơ" onclick="nhanhoso('<%=dkdv.getMacongviec()%>','<%=dkdv.getMaungvien()%>')">
+								<i class="fa fa-check" style="color:red"></i>
+						</a>&nbsp&nbsp&nbsp
+						<a href="" title="Hủy ĐK"
+							onclick="layDL('<%=dkdv.getMacongviec()%>','<%=dkdv.getMaungvien()%>');">
 								<i class="fa fa-trash-o"></i>
 						</a></td>
 					</tr>
@@ -104,17 +118,15 @@
 <script type="text/javascript" src="components/bootstrap-rating.js"></script>
 <script type="text/javascript" src="components/notify.min.js"></script>
 <script type="text/javascript">
-	
-	
-		function layDL(a,b) {
+	function layDL(a, b) {
 		//debugger;
 		//alert(a+""+b);
 		$.ajax({
 			url : 'XacNhanHoanThanhCVServlet',
 			data : {
 				maDangKy : a,
-				xoacongviec:"sadasd",
-				ungvien:b
+				xoacongviec : "sadasd",
+				ungvien : b
 			},
 			success : function(responseText) {
 				alert("Xóa thành công");
@@ -126,6 +138,21 @@
 			},
 		});
 	};
-	
+	function nhanhoso(a, b) {
+		$.ajax({
+			url : 'Nhanhoso',
+			data : {
+				macongviec : a,
+				maungvien : b
+			},
+			success : function(responseText) {
+				location.reload(true);
+			},
+			error : function(responseText) {
+				//debugger;
+				document.getElementById("thongbao").value = responseText;
+			},
+		});
+	};
 </script>
 <%@include file="FooterNguoidung.jsp"%>

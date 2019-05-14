@@ -1,3 +1,4 @@
+<%@page import="model.bean.dangkydichvu"%>
 <%@page import="model.bean.congviec"%>
 <%@page import="common.StringProcess"%>
 <%@page import="java.util.ArrayList"%>
@@ -43,7 +44,7 @@
 		</div>
 		<div class="">
 			<%
-				ArrayList<congviec> listCongViec = (ArrayList<congviec>) request.getAttribute("listCongViec");
+				ArrayList<dangkydichvu> listCongViec = (ArrayList<dangkydichvu>) request.getAttribute("listCongViec");
 				int i = 0;
 				if (listCongViec.size() == 0) {
 			%>
@@ -62,12 +63,13 @@
 						<th>Ngày hết hạn</th>
 						<th>Lương</th>
 						<th>Số giờ làm</th>
+						<th>Trạng thái</th>
 						<th>Thao tác</th>
 					</tr>
 				</thead>
 				<tbody>
 					<%
-						for (congviec dkdv : listCongViec) {
+						for (dangkydichvu dkdv : listCongViec) {
 					%>
 					<tr>
 						<th><%=++i%></th>
@@ -77,6 +79,15 @@
 						<td><%=dkdv.getNgayhethan()%></td>
 						<td><%=dkdv.getLuong()%></td>
 						<td><%=dkdv.getSogio()%></td>
+						<td>
+							<%
+								if (dkdv.getTrangthai() == 0) {
+							%> Chưa xác thực <%
+								} else {
+							%> Hồ sơ đã được nhận <%
+								}
+							%>
+						</td>
 						<td><a href="" title="Hủy ĐK"
 							onclick="layDL('<%=dkdv.getId() %>');">
 								<i class="fa fa-trash-o"></i>

@@ -102,7 +102,7 @@ public class DangkydichvuDAO {
 		dangkydichvu dangkydichvu = null;
 		
 		ArrayList<dangkydichvu> list = new ArrayList<dangkydichvu>();
-		String sql = "select macongviec,maungvien,sodienthoai,hoten,madichvu from dangkydichvu\r\n" + 
+		String sql = "select macongviec,maungvien,sodienthoai,hoten,madichvu,trangthai from dangkydichvu\r\n" + 
 				"join congviec on congviec.id=dangkydichvu.macongviec\r\n" + 
 				"join taikhoan on taikhoan.sodienthoai=dangkydichvu.maungvien \r\n" + 
 				"where makhachhang=?";
@@ -118,6 +118,7 @@ public class DangkydichvuDAO {
 				dangkydichvu.setSodienthoai(rs.getString(3));
 				dangkydichvu.setTencongty(rs.getString(4));
 				dangkydichvu.setMadichvu(rs.getString(5));
+				dangkydichvu.setTrangthai(rs.getInt(6));
 				list.add(dangkydichvu);
 			}
 		} catch (SQLException e) {
@@ -164,18 +165,14 @@ public class DangkydichvuDAO {
 		
 	}
 
-	public void suadangkydichvuTheoSoDienThoai(String hoTen, String soDienThoai, int namSinh, String diaChi,
-			String madangkydichvu) {
+	public void suadangkydichvuTheoSoDienThoai(int macongviec, int maungvien) {
 		connect();
 		// dau vao la array chua sua // sua luon taikhoan nha
-		String sql = "update dangkydichvu set HoTen = ?, NamSinh = ?, DiaChi = ?, Madangkydichvu = ? where  SoDienThoai = ?";
+		String sql = "update dangkydichvu set trangthai=1 where  macongviec =? and maungvien=?";
 		try {
 			PreparedStatement ps = connection.prepareStatement(sql);
-			ps.setString(1, hoTen);
-			ps.setString(2, soDienThoai);
-			ps.setInt(3, namSinh);
-			ps.setString(4, diaChi);
-			ps.setString(5, madangkydichvu);
+			ps.setInt(1, macongviec);
+			ps.setInt(2, maungvien);
 			ps.executeUpdate();
 		} catch (SQLException e) {
 			// TODO Auto-generated catch block
@@ -210,6 +207,8 @@ public class DangkydichvuDAO {
 
 	public static void main(String[] args) {
 		DangkydichvuBO dkBO = new DangkydichvuBO();
+		
+		System.out.println(dkBO.laydsdangky(1234));
 //		dangkydichvu dk= new dangkydichvu();
 //		
 //		dk.setMacongviec(121234234);

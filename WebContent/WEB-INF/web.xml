@@ -269,4 +269,14 @@
     <servlet-name>XoaDichVuServlet</servlet-name>
     <url-pattern>/XoaDichVuServlet</url-pattern>
   </servlet-mapping>
+  <servlet>
+    <description></description>
+    <display-name>Nhanhoso</display-name>
+    <servlet-name>Nhanhoso</servlet-name>
+    <servlet-class>controller.Nhanhoso</servlet-class>
+  </servlet>
+  <servlet-mapping>
+    <servlet-name>Nhanhoso</servlet-name>
+    <url-pattern>/Nhanhoso</url-pattern>
+  </servlet-mapping>
 </web-app>
