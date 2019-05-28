@@ -102,15 +102,15 @@ public class DangkydichvuDAO {
 		dangkydichvu dangkydichvu = null;
 		
 		ArrayList<dangkydichvu> list = new ArrayList<dangkydichvu>();
-		String sql = "select macongviec,maungvien,sodienthoai,hoten,madichvu,trangthai from dangkydichvu\r\n" + 
+		String sql = "select macongviec,dangkydichvu.maungvien,sodienthoai,hoten,congviec.madichvu,trangthai,mota,ngayhethan,id from dangkydichvu\r\n" + 
 				"join congviec on congviec.id=dangkydichvu.macongviec\r\n" + 
-				"join taikhoan on taikhoan.sodienthoai=dangkydichvu.maungvien \r\n" + 
-				"where makhachhang=?";
+				"join taikhoan on taikhoan.sodienthoai=dangkydichvu.maungvien join ungvien on dangkydichvu.maungvien=ungvien.maungvien \r\n" + 
+				"where makhachhang=? and trangthai <> 2";
 		try {
 			PreparedStatement ps = connection.prepareStatement(sql);
 			ps.setInt(1, soDienThoai);
 			ResultSet rs = ps.executeQuery();
-			
+			UngVienDAO uvdao=  new UngVienDAO();
 			while (rs.next()) {
 				dangkydichvu = new dangkydichvu();
 				dangkydichvu.setMacongviec(rs.getInt(1));
@@ -119,6 +119,10 @@ public class DangkydichvuDAO {
 				dangkydichvu.setTencongty(rs.getString(4));
 				dangkydichvu.setMadichvu(rs.getString(5));
 				dangkydichvu.setTrangthai(rs.getInt(6));
+				dangkydichvu.setMota(rs.getString(7));
+				dangkydichvu.setNgayhethan(rs.getString(8));
+				dangkydichvu.setId(rs.getInt(9));
+				dangkydichvu.setUngvien(uvdao.layungvienTheoSoDienThoai(String.valueOf( rs.getInt(2))));
 				list.add(dangkydichvu);
 			}
 		} catch (SQLException e) {
@@ -169,6 +173,20 @@ public class DangkydichvuDAO {
 		connect();
 		// dau vao la array chua sua // sua luon taikhoan nha
 		String sql = "update dangkydichvu set trangthai=1 where  macongviec =? and maungvien=?";
+		try {
+			PreparedStatement ps = connection.prepareStatement(sql);
+			ps.setInt(1, macongviec);
+			ps.setInt(2, maungvien);
+			ps.executeUpdate();
+		} catch (SQLException e) {
+			// TODO Auto-generated catch block
+			e.printStackTrace();
+		}
+	}
+	public void suadangkydichvu(int macongviec, int maungvien) {
+		connect();
+		// dau vao la array chua sua // sua luon taikhoan nha
+		String sql = "update dangkydichvu set trangthai=2 where  macongviec =? and maungvien=?";
 		try {
 			PreparedStatement ps = connection.prepareStatement(sql);
 			ps.setInt(1, macongviec);

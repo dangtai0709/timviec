@@ -103,15 +103,15 @@ public class UngVienDAO {
 			ResultSet rs = ps.executeQuery();
 			while (rs.next()) {
 				ungvien = new ungvien();
-				ungvien.setCmnd(rs.getInt(2));
 				ungvien.setMaungvien(rs.getInt(1));
+				ungvien.setCmnd(rs.getInt(2));
 				ungvien.setGioithieubanthan(rs.getString(3));
 				ungvien.setMadichvu(rs.getString(4));
-				ungvien.setDiachi(rs.getString(8));
-				ungvien.setNgaysinh(rs.getString(10));
-				ungvien.setGioitinh(rs.getString(11));
-				ungvien.setHoten(rs.getString(12));
-				;
+				ungvien.setDiachi(rs.getString(7));
+				ungvien.setNgaysinh(rs.getString(9));
+				ungvien.setGioitinh(rs.getString(10));
+				ungvien.setHoten(rs.getString(11));
+				
 			}
 
 		} catch (SQLException e) {
@@ -207,9 +207,10 @@ public class UngVienDAO {
 		// nguoi.setMatkhau("xxxx");
 		// uv.themungvien(nguoi);
 		// System.out.println(uv.layDanhSachungvienTheoDV("DV2"));
-		// ungvien uvn = uv.layungvienTheoSoDienThoai("0976573743");
+		 ungvien uvn = uv.layungvienTheoSoDienThoai("123");
+		 System.out.println(uvn.getHoten());
 		// System.out.println(uvn.getTenDichVu());
-		uv.xoaungvienTheoSoDienThoai("3333");
+		//uv.xoaungvienTheoSoDienThoai("3333");
 	}
 
 	// public boolean kiemTraungvien(String soDienThoai) {

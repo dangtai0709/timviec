@@ -23,6 +23,9 @@ public class DangkydichvuBO {
 	public void suadangkydichvuTheoSoDienThoai(int macongviec, int maungvien) {
 		dv.suadangkydichvuTheoSoDienThoai(macongviec, maungvien);
 	}
+	public void suadangkydichvu(int macongviec, int maungvien) {
+		dv.suadangkydichvu(macongviec, maungvien);
+	}
 
 	public void xoadangkydichvuTheoSoDienThoai(int soDienThoai,int maungvien) {
 		dv.xoadangkydichvuTheoSoDienThoai(soDienThoai, maungvien);

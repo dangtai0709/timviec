@@ -24,7 +24,7 @@ public class CongViecDAO {
 					"join khachhang on khachhang.makhachhang= congviec.makhachhang  ";
 		} else {
 			sql = "select congviec.*,tendichvu,tencongty,email from congviec join dichvu on congviec.madichvu=dichvu.madichvu\r\n" + 
-					"join khachhang on khachhang.makhachhang= congviec.makhachhang where congviec.madichvu='"
+					"left join khachhang on khachhang.makhachhang= congviec.makhachhang where congviec.madichvu='"
 					+ madichvu + "'";
 		}
 		ResultSet rs = null;

@@ -56,7 +56,6 @@
 		<div class="">
 			<%
 				ArrayList<dangkydichvu> listdangkydichvu = (ArrayList<dangkydichvu>) request.getAttribute("listCongViec");
-				int i = 0;
 				if (listdangkydichvu.size() == 0) {
 			%>
 			<h3>Bạn chưa đăng ký dịch vụ nào</h3>
@@ -73,9 +72,12 @@
 					<tr>
 						<th>#</th>
 						<th>Mã dịch vụ</th>
+						<th>Mô tả</th>
+						<th>Ngày hết hạn đăng ký</th>
 						<th>Số điện thoại</th>
 						<th>Tên người đăng ký</th>
 						<th>Trạng thái</th>
+						<th>Thông tin cơ bản</th>
 						<th>Thao tác</th>
 					</tr>
 				</thead>
@@ -84,8 +86,10 @@
 						for (dangkydichvu dkdv : listdangkydichvu) {
 					%>
 					<tr>
-						<td><%=++i%></td>
+						<td><%=dkdv.getId()%></td>
 						<td><%=StringProcess.tendichvu(dkdv.getMadichvu())%></td>
+						<th><%=dkdv.getMota()%></th>
+						<th><%=dkdv.getNgayhethan()%></th>
 						<td><%=dkdv.getSodienthoai()%></td>
 						<td><%=dkdv.getTencongty()%></td>
 						<td>
@@ -96,6 +100,14 @@
 							%> Hồ sơ đã được nhận <%
 								}
 							%>
+						</td>
+					
+						<td>
+						CMND:<%= dkdv.getUngvien().getCmnd()%>
+						<br>
+						Giới tính: <%= dkdv.getUngvien().getGioitinh()%>
+						<br>
+						Giới thiệu bản thân: <%= dkdv.getUngvien().getGioithieubanthan()%>
 						</td>
 						<td>
 						<a href="" title="Nhận hồ sơ" onclick="nhanhoso('<%=dkdv.getMacongviec()%>','<%=dkdv.getMaungvien()%>')">

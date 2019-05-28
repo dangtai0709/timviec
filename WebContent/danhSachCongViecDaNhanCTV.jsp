@@ -83,10 +83,12 @@
 							<%
 								if (dkdv.getTrangthai() == 0) {
 							%> Chưa xác thực <%
-								} else {
+								} if(dkdv.getTrangthai() == 1) {
 							%> Hồ sơ đã được nhận <%
-								}
+								}if(dkdv.getTrangthai() == 2){
 							%>
+							Hồ sơ bị từ chối
+							<%} %>
 						</td>
 						<td><a href="" title="Hủy ĐK"
 							onclick="layDL('<%=dkdv.getId() %>');">

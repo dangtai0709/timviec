@@ -59,7 +59,7 @@ public class XacNhanHoanThanhCVServlet extends HttpServlet {
 				if(ungvien == null) {
 					dkBO.xoadangkydichvuTheoSoDienThoai(Integer.valueOf(maDangKy) ,tk.getSodienthoai());
 				}else {
-					dkBO.xoadangkydichvuTheoSoDienThoai(Integer.valueOf(maDangKy) ,Integer.valueOf(ungvien));
+					dkBO.suadangkydichvu(Integer.valueOf(maDangKy) ,Integer.valueOf(ungvien));
 				}
 				
 			}else {

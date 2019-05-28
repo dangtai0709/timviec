@@ -41,9 +41,11 @@ public class ThongtinKhachHang extends HttpServlet {
 			String Email = request.getParameter("Email");
 			String phone = request.getParameter("phone");
 			String diachi = request.getParameter("diachi");
+			String ungvien = request.getParameter("maungvien");
 			khachhang kh = new khachhang();
 			KhachHangBO khbo= new KhachHangBO();
 			kh.setDiachicty(diachi);
+			kh.setMakhachhang(Integer.valueOf(ungvien));
 			kh.setSodienthoaicty(Integer.valueOf(phone));
 			kh.setEmailcty(Email);
 			kh.setTencongty(tencongty);

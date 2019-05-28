@@ -1,4 +1,5 @@
 <%@page import="model.bean.dichvu"%>
+<%@page import="model.bean.taikhoan"%>
 <%@page import="java.util.ArrayList"%>
 <%@ page language="java" contentType="text/html; charset=UTF-8"
 	pageEncoding="UTF-8"%>
@@ -49,7 +50,10 @@ form{
 							<form action="ThongtinKhachHang" method="post">
 								<!-- form start -->
 								<!-- <div class="box-body"> -->
-								
+								<%taikhoan tk=(taikhoan) session.getAttribute("taikhoan"); %>
+										 <input type="text"
+										name="maungvien" class="hidden" 
+										value="<%= tk.getSodienthoai()%>">
 								<div class="form-group">
 									<label for="phone">Tên công ty</label> <input type="text"
 										name="tencongty" class="form-control" 
